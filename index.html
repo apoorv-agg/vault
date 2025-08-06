@@ -149,54 +149,6 @@
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
-    /* ----------------------------------- */
-    /*    Responsive overrides for mobile   */
-    /* ----------------------------------- */
-    @media screen and (max-width: 768px) {
-      /* NAV: stack links vertically, shrink padding */
-      nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 8px 16px;
-        gap: 12px;
-      }
-
-      /* PARALLAX: disable fixed on mobile, let image scroll */
-      .parallax {
-        background-attachment: scroll !important;
-        height: auto;
-        padding: 40px 0;   /* allow content some breathing room */
-      }
-      .parallax .overlay {
-        position: relative;  /* overlay shouldn’t cover entire scroll area */
-        height: auto;
-      }
-
-      /* HERO CONTENT: font-size tweaks */
-      .parallax .content h2 {
-        font-size: 2rem;
-      }
-      .parallax .content p {
-        font-size: 1rem;
-      }
-
-      /* SECTIONS: reduce padding */
-      section {
-        padding: 40px 16px;
-      }
-
-      /* PROJECT GRID: single‐column */
-      .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-
-      /* PROJECT CARD: shrink padding */
-      .project-card {
-        padding: 12px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -269,4 +221,5 @@
     document.querySelectorAll('section').forEach(sec => observer.observe(sec));
   </script>
 </body>
+
 </html>
